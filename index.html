@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Carteira de Negociação</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilização adicional para remover bordas do vídeo */
+        video {
+            border: none;
+            outline: none;
+            width: 100%; /* Para ocupar toda a largura do contêiner */
+            height: auto; /* Para manter a proporção do vídeo */
+        }
+
+        /* Estilização para os botões */
+        .button-venda {
+            background-color: #dc3545; /* Vermelho para venda */
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <!-- Primeira etapa: Observação do gráfico -->
+    <div class="content" id="step1">
+        <h1>Descubra os Segredos do Mercado! 📊</h1>
+        <p>Analise o gráfico abaixo e prepare-se para fazer previsões que podem transformar sua vida financeira!</p>
+        <img class="grafico-img" src="grafico1.jpg" alt="Gráfico 1 de Previsão">
+        <button class="button" onclick="nextStep()">Avançar para a Simulação 🚀</button>
+    </div>
+
+    <!-- Segunda etapa: Simulação -->
+    <div class="content" id="step2" style="display: none;">
+        <h1>Simulação de Compra e Venda 🛒</h1>
+        <p>É hora de colocar sua análise em prática. Assista ao vídeo abaixo e tome suas decisões de compra ou venda!</p>
+        <video id="video-simulacao" autoplay>
+            <source src="C:\Users\Raphael Passos\Downloads\pagina 03\video.mp4.mov" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <div id="botoes-simulacao" style="display: none;">
+            <button class="button" onclick="acaoCompra()">Compra</button>
+            <button class="button button-venda" onclick="acaoVenda()">Venda</button>
+        </div>
+    </div>
+
+    <!-- Terceira etapa: Resultado -->
+    <div class="content" id="step3" style="display: none;">
+        <h1 id="result-title"></h1>
+        <p id="result-message"></p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
